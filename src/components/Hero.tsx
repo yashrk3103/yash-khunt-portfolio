@@ -6,7 +6,7 @@ import profilePhoto from '@/assets/profile-photo.jpg';
 const roles = [
   'Full-Stack Developer',
   'MERN Stack Developer',
-  'Secure Application Developer',
+  'Cybersecurity Enthusiast',
 ];
 
 const Hero = () => {
@@ -80,7 +80,7 @@ const Hero = () => {
               transition={{ delay: 0.3 }}
               className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6"
             >
-              Hi, I'm{' '}
+              Hi,I'm{' '}
               <span className="gradient-text">Yash Khunt</span>
             </motion.h1>
 
@@ -173,7 +173,7 @@ const Hero = () => {
                   <span className="terminal-dot terminal-dot-red" />
                   <span className="terminal-dot terminal-dot-yellow" />
                   <span className="terminal-dot terminal-dot-green" />
-                  <span className="ml-2 text-xs text-muted-foreground font-mono">profile.tsx</span>
+                  <span className="ml-2 text-xs text-muted-foreground font-mono">profile</span>
                 </div>
                 
                 {/* Profile Image */}
@@ -193,7 +193,8 @@ const Hero = () => {
                   <p className="text-muted-foreground text-sm mb-4">Gujarat, India</p>
                   
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-primary font-mono">Full-Stack Developer</span>
+                    <span className="text-primary font-mono">Full-Stack Developer  
+                      <br />Cybersecurity enthusiast </span>
                   </div>
                 </div>
               </div>

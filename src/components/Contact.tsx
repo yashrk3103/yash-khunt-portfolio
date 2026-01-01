@@ -239,7 +239,7 @@ const Contact = () => {
                   ) : (
                     <>
                       <Send className="w-4 h-4" />
-                      <span>$ send message</span>
+                      <span>send message</span>
                     </>
                   )}
                 </button>

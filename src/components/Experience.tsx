@@ -5,6 +5,19 @@ import { Briefcase, Calendar, MapPin, Shield } from 'lucide-react';
 
 const experiences = [
   {
+    title: 'Software Engineer Intern',
+    company: 'Synodica Solutions Pvt. Ltd.',
+    location: 'Surat',
+    period: 'Jan 2026 – Present', // Updated date
+    description: [
+      'Developing and customizing modules in Odoo ERP using Python and XML',
+      'Managing Linux-based server environments for deployment and testing',
+      'Collaborating with senior developers to optimize database queries and performance',
+    ],
+    tech: ['Python', 'Linux', 'Odoo', 'PostgreSQL'], // Added tech stack
+    current: true,
+  },
+  {
     title: 'Cyber Security Intern',
     company: 'Elevate Labs',
     location: 'Remote',
@@ -14,7 +27,8 @@ const experiences = [
       'Learning security assessment methodologies',
       'Hands-on experience with security tools',
     ],
-    current: true,
+    tech: ['Network Traffic Analysis', 'Encryption', ' Python ', 'Vulnerability Scanning' ],
+    current: false, // Changed to false since the new one is current
   },
   {
     title: 'Cyber Security Intern',
@@ -26,6 +40,7 @@ const experiences = [
       'Learned about application security best practices',
       'Participated in security awareness initiatives',
     ],
+    tech: ['Kali Linux', 'Network Traffic Analysis', 'Vulnerability Scanning', 'Wireshark', 'DoS/DDoS Attack Mitigation Techniques'],
     current: false,
   },
 ];
@@ -83,7 +98,7 @@ const Experience = () => {
                     <span className="terminal-dot terminal-dot-yellow" />
                     <span className="terminal-dot terminal-dot-green" />
                     <span className="ml-2 text-xs text-muted-foreground font-mono">
-                      experience_{index + 1}.json
+                      experience_{index + 1}
                     </span>
                     {exp.current && (
                       <span className="ml-auto px-2 py-0.5 text-xs font-mono bg-terminal-green/20 text-terminal-green rounded-full">
@@ -112,7 +127,7 @@ const Experience = () => {
                     </div>
 
                     {/* Description */}
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 mb-4">
                       {exp.description.map((item, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
                           <span className="text-primary mt-1">▹</span>
@@ -120,6 +135,17 @@ const Experience = () => {
                         </li>
                       ))}
                     </ul>
+
+                    {/* Tech Stack Badge Row (New Addition) */}
+                    {exp.tech && (
+                      <div className="flex flex-wrap gap-2 pt-2 border-t border-border/50">
+                        {exp.tech.map((t) => (
+                          <span key={t} className="px-2 py-1 text-[10px] font-mono bg-secondary text-secondary-foreground rounded border border-border">
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </motion.div>
