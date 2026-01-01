@@ -9,7 +9,8 @@ const projects = [
     description: 'MERN stack application powered by Gemini AI for automated data extraction, invoice generation, payment reminders, and comprehensive dashboard analytics.',
     tech: ['React', 'Node.js', 'MongoDB', 'Gemini AI', 'Express.js'],
     github: 'https://github.com/yashrk3103',
-    live: '#',
+    // UPDATED URL HERE
+    live: 'https://vercel-front-ten.vercel.app',
     featured: true,
   },
   {
@@ -25,7 +26,8 @@ const projects = [
     description: 'NLP-based spam detection with Naive Bayes classifier, featuring LIME-based model explainability and Streamlit UI for interactive analysis.',
     tech: ['Python', 'NLP', 'Naive Bayes', 'LIME', 'Streamlit'],
     github: 'https://github.com/yashrk3103',
-    live: '#',
+    // UPDATED URL HERE
+    live: 'https://spam-detector0.streamlit.app',
     featured: true,
   },
   {
