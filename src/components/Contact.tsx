@@ -15,9 +15,11 @@ const Contact = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // 1. UPDATED STATE KEYS TO MATCH EMAILJS TEMPLATE
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    from_name: '', 
+    from_email: '',
     message: '',
   });
 
@@ -40,7 +42,8 @@ const Contact = () => {
         description: "Thanks for reaching out. I'll get back to you soon.",
       });
       
-      setFormData({ name: '', email: '', message: '' });
+      // 2. RESET FORM USING CORRECT KEYS
+      setFormData({ from_name: '', from_email: '', message: '' });
     } catch (error) {
       console.error('EmailJS error:', error);
       toast({
@@ -83,14 +86,15 @@ const Contact = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {/* Contact Info */}
+          {/* Contact Info - Unchanged */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-6"
           >
-            <div className="terminal-card">
+             {/* ... (Your Contact Info Card Code remains here) ... */}
+             <div className="terminal-card">
               <div className="terminal-card-header">
                 <span className="terminal-dot terminal-dot-red" />
                 <span className="terminal-dot terminal-dot-yellow" />
@@ -170,15 +174,17 @@ const Contact = () => {
                 <span className="ml-2 text-xs text-muted-foreground font-mono">send_message.sh</span>
               </div>
               <form ref={formRef} onSubmit={handleSubmit} className="p-6 space-y-4">
+                
+                {/* 3. NAME INPUT CHANGED TO "from_name" */}
                 <div>
-                  <label htmlFor="name" className="block text-sm font-mono text-muted-foreground mb-2">
+                  <label htmlFor="from_name" className="block text-sm font-mono text-muted-foreground mb-2">
                     <span className="text-primary">$</span> name
                   </label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
+                    id="from_name"
+                    name="from_name" 
+                    value={formData.from_name}
                     onChange={handleChange}
                     required
                     placeholder="Your name"
@@ -186,15 +192,16 @@ const Contact = () => {
                   />
                 </div>
 
+                {/* 4. EMAIL INPUT CHANGED TO "from_email" */}
                 <div>
-                  <label htmlFor="email" className="block text-sm font-mono text-muted-foreground mb-2">
+                  <label htmlFor="from_email" className="block text-sm font-mono text-muted-foreground mb-2">
                     <span className="text-primary">$</span> email
                   </label>
                   <input
                     type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
+                    id="from_email"
+                    name="from_email"
+                    value={formData.from_email}
                     onChange={handleChange}
                     required
                     placeholder="your@email.com"
@@ -202,6 +209,7 @@ const Contact = () => {
                   />
                 </div>
 
+                {/* MESSAGE INPUT (REMAINS "message") */}
                 <div>
                   <label htmlFor="message" className="block text-sm font-mono text-muted-foreground mb-2">
                     <span className="text-primary">$</span> message
