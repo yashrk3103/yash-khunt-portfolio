@@ -1,73 +1,83 @@
-# Welcome to your Lovable project
+<div align="center">
 
-## Project info
+# 👋 Hi, I'm Yash Khunt
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+### Full-Stack Developer
 
-## How can I edit this code?
+[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-Visit_Now-6366f1?style=for-the-badge)](https://yash-khunt-portfolio.lovable.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-yashrk3103-181717?style=for-the-badge&logo=github)](https://github.com/yashrk3103)
 
-There are several ways of editing your application.
+</div>
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🚀 About This Project
 
-Changes made via Lovable will be committed automatically to this repo.
+This is my **personal portfolio website** — a clean, modern, and fully responsive web app built to showcase my skills, projects, and experience as a Full-Stack Developer.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+| Category | Technologies |
+|----------|-------------|
+| **Framework** | React + TypeScript |
+| **Build Tool** | Vite |
+| **Styling** | Tailwind CSS |
+| **UI Components** | shadcn/ui |
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## ✨ Features
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- ⚡ **Blazing fast** — powered by Vite for near-instant load times
+- 📱 **Fully responsive** — looks great on all screen sizes
+- 🎨 **Modern UI** — clean design using Tailwind CSS & shadcn/ui
+- 🔒 **Type-safe** — built entirely with TypeScript
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 🧑‍💻 Run Locally
+
+Make sure you have **Node.js** and **npm** installed, then:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/yashrk3103/yash-khunt-portfolio.git
+
+# 2. Navigate into the project
+cd yash-khunt-portfolio
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the dev server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open [http://localhost:8080](http://localhost:8080) in your browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🌐 Live Demo
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+👉 **[yash-khunt-portfolio.lovable.app](https://yash-khunt-portfolio.lovable.app/)**
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 📬 Connect with Me
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Feel free to reach out or explore more of my work through my portfolio!
 
-## How can I deploy this project?
+<div align="center">
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+[![Portfolio](https://img.shields.io/badge/Portfolio-6366f1?style=flat-square&logo=google-chrome&logoColor=white)](https://yash-khunt-portfolio.lovable.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/yashrk3103)
 
-## Can I connect a custom domain to my Lovable project?
+</div>
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+<div align="center">
+  <sub>Built with ❤️ by Yash Khunt</sub>
+</div>
