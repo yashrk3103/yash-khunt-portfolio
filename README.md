@@ -74,8 +74,8 @@
 - Integrated Google Gemini API for intelligent data extraction and invoice structuring
 - Secure REST APIs with role-based access control, email automation, and real-time dashboard
 
-[![Live](https://img.shields.io/badge/Live_Demo-6366f1?style=flat-square&logo=google-chrome&logoColor=white)](#)
-[![Source](https://img.shields.io/badge/Source_Code-181717?style=flat-square&logo=github&logoColor=white)](#)
+[![Live](https://img.shields.io/badge/Live_Demo-6366f1?style=flat-square&logo=google-chrome&logoColor=white)](https://vercel-front-ten.vercel.app/)
+[![Source](https://img.shields.io/badge/Source_Code-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/yashrk3103/AI-Invoice-Generator)
 
 ---
 
@@ -86,7 +86,7 @@
 - Messages encrypted on sender's device, decrypted only on receiver's — zero interception
 - Secure authentication, session handling, and message history
 
-[![Source](https://img.shields.io/badge/Source_Code-181717?style=flat-square&logo=github&logoColor=white)](#)
+[![Source](https://img.shields.io/badge/Source_Code-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/yashrk3103/secure-chat-app)
 
 ---
 
@@ -97,8 +97,8 @@
 - Integrated LIME for human-readable AI explanations — why was this spam?
 - Containerized with Docker for easy deployment; interactive Streamlit UI
 
-[![Live](https://img.shields.io/badge/Live_Demo-6366f1?style=flat-square&logo=google-chrome&logoColor=white)](#)
-[![Source](https://img.shields.io/badge/Source_Code-181717?style=flat-square&logo=github&logoColor=white)](#)
+[![Live](https://img.shields.io/badge/Live_Demo-6366f1?style=flat-square&logo=google-chrome&logoColor=white)](https://spam-detector0.streamlit.app/)
+[![Source](https://img.shields.io/badge/Source_Code-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/yashrk3103/Spam-detector)
 
 > 💡 Replace the `#` in the badge links above with your actual live demo and GitHub repo URLs!
 
