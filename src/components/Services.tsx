@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
+import { LazyMotion, domAnimation, m, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Code2, Shield, Plug, Brain, Cloud, Sparkles } from 'lucide-react';
 
@@ -46,31 +45,32 @@ const Services = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
+    <LazyMotion features={domAnimation}>
     <section id="services" className="py-24 relative" ref={ref}>
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <span className="section-badge mb-4">
-            <Sparkles className="w-3 h-3" />
+            <Sparkles className="size-3" />
             Services
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-4">
             What I <span className="text-primary">Offer</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Comprehensive development services to bring your ideas to life
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <motion.div
+            <m.div
               key={service.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -80,11 +80,11 @@ const Services = () => {
               <div className="p-6">
                 {/* Icon */}
                 <div className={`inline-flex p-3 rounded-xl ${service.bgColor} mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className={`w-6 h-6 ${service.color}`} />
+                  <service.icon className={`size-6 ${service.color}`} />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold font-mono mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-semibold font-mono mb-3 group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
 
@@ -100,11 +100,12 @@ const Services = () => {
                   </span>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>
     </section>
+    </LazyMotion>
   );
 };
 

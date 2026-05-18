@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
+import { LazyMotion, domAnimation, m, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { GraduationCap, Code2, Shield, Sparkles } from 'lucide-react';
 
@@ -8,30 +7,31 @@ const About = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
+    <LazyMotion features={domAnimation}>
     <section id="about" className="py-24 relative" ref={ref}>
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <span className="section-badge mb-4">
-            <Sparkles className="w-3 h-3" />
+            <Sparkles className="size-3" />
             About Me
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-4">
             Know More <span className="text-primary">About Me</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             A passionate developer focused on building secure, scalable applications
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left - About Text */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -63,7 +63,7 @@ const About = () => {
             </div>
 
             {/* Quick Stats */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -71,11 +71,11 @@ const About = () => {
             >
               {[
                 { value: '8.77', label: 'CGPA' },
-                { value: '5+', label: 'Projects' },
-                { value: '2', label: 'Internships' },
-              ].map((stat, index) => (
+                { value: '3+', label: 'Live Projects' },
+                { value: '3', label: 'Internships' },
+              ].map((stat) => (
                 <div
-                  key={index}
+                  key={stat.label}
                   className="terminal-card p-4 text-center hover-glow"
                 >
                   <span className="text-2xl sm:text-3xl font-bold text-primary font-mono">
@@ -84,11 +84,11 @@ const About = () => {
                   <p className="text-xs text-muted-foreground mt-1">{stat.label}</p>
                 </div>
               ))}
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
 
           {/* Right - Education & Highlights */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -98,9 +98,9 @@ const About = () => {
             <div className="terminal-card p-6">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 rounded-lg bg-primary/10 text-primary">
-                  <GraduationCap className="w-5 h-5" />
+                  <GraduationCap className="size-5" />
                 </div>
-                <h3 className="text-lg font-bold font-mono">Education</h3>
+                <h3 className="text-lg font-semibold font-mono">Education</h3>
               </div>
               
               <div className="space-y-4">
@@ -128,7 +128,7 @@ const About = () => {
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="terminal-card p-5 hover-glow">
                 <div className="p-2 rounded-lg bg-accent/10 text-accent w-fit mb-3">
-                  <Code2 className="w-5 h-5" />
+                  <Code2 className="size-5" />
                 </div>
                 <h4 className="font-semibold font-mono mb-2">Clean Architecture</h4>
                 <p className="text-sm text-muted-foreground">
@@ -138,7 +138,7 @@ const About = () => {
               
               <div className="terminal-card p-5 hover-glow">
                 <div className="p-2 rounded-lg bg-terminal-green/10 text-terminal-green w-fit mb-3">
-                  <Shield className="w-5 h-5" />
+                  <Shield className="size-5" />
                 </div>
                 <h4 className="font-semibold font-mono mb-2">Security Focused</h4>
                 <p className="text-sm text-muted-foreground">
@@ -146,10 +146,11 @@ const About = () => {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>
+    </LazyMotion>
   );
 };
 

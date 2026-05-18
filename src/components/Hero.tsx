@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useState, useEffect, useRef } from 'react';
+import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import profilePhoto from '@/assets/profile-photo.jpg';
 
@@ -10,12 +10,12 @@ const roles = [
 ];
 
 const Hero = () => {
-  const [currentRole, setCurrentRole] = useState(0);
+  const currentRoleRef = useRef(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const role = roles[currentRole];
+    const role = roles[currentRoleRef.current];
     const timeout = setTimeout(
       () => {
         if (!isDeleting) {
@@ -29,7 +29,7 @@ const Hero = () => {
             setDisplayText(displayText.slice(0, -1));
           } else {
             setIsDeleting(false);
-            setCurrentRole((prev) => (prev + 1) % roles.length);
+            currentRoleRef.current = (currentRoleRef.current + 1) % roles.length;
           }
         }
       },
@@ -37,9 +37,10 @@ const Hero = () => {
     );
 
     return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentRole]);
+  }, [displayText, isDeleting]);
 
   return (
+    <LazyMotion features={domAnimation}>
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Grid Background */}
       <div className="absolute inset-0 grid-pattern opacity-50" />
@@ -51,41 +52,41 @@ const Hero = () => {
       <div className="container mx-auto px-4 pt-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="order-2 lg:order-1"
           >
             {/* Available Badge */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="inline-flex items-center gap-2 mb-6"
             >
-              <span className="relative flex h-3 w-3">
+              <span className="relative flex size-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-terminal-green opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-terminal-green"></span>
+                <span className="relative inline-flex rounded-full size-3 bg-terminal-green"></span>
               </span>
               <span className="text-terminal-green text-sm font-mono uppercase tracking-wider">
                 Available for work
               </span>
-            </motion.div>
+            </m.div>
 
             {/* Main Heading */}
-            <motion.h1
+            <m.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6"
+              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight mb-6"
             >
               Hi,I'm{' '}
               <span className="gradient-text">Yash Khunt</span>
-            </motion.h1>
+            </m.h1>
 
             {/* Typing Animation */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
@@ -94,10 +95,10 @@ const Hero = () => {
               <span className="text-muted-foreground">{'> '}</span>
               {displayText}
               <span className="typing-cursor" />
-            </motion.div>
+            </m.div>
 
             {/* Description */}
-            <motion.p
+            <m.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
@@ -106,10 +107,10 @@ const Hero = () => {
               Passionate IT undergraduate with hands-on experience in full-stack web 
               development using the MERN stack. Proficient in building responsive, 
               secure, and dynamic web applications.
-            </motion.p>
+            </m.p>
 
             {/* CTA Buttons */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
@@ -121,10 +122,10 @@ const Hero = () => {
               <a href="#contact" className="btn-terminal-outline">
                 Contact Me
               </a>
-            </motion.div>
+            </m.div>
 
             {/* Social Links */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
@@ -136,7 +137,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="p-3 rounded-lg bg-secondary hover:bg-primary/20 hover:text-primary transition-all duration-300 hover-glow border border-border"
               >
-                <Github className="w-5 h-5" />
+                <Github className="size-5" />
               </a>
               <a
                 href="http://www.linkedin.com/in/yash-khunt-a72440250"
@@ -144,19 +145,19 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="p-3 rounded-lg bg-secondary hover:bg-primary/20 hover:text-primary transition-all duration-300 hover-glow border border-border"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="size-5" />
               </a>
               <a
                 href="mailto:yashkhunt90@gmail.com"
                 className="p-3 rounded-lg bg-secondary hover:bg-primary/20 hover:text-primary transition-all duration-300 hover-glow border border-border"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="size-5" />
               </a>
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
 
           {/* Right Content - Profile Card */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -189,7 +190,7 @@ const Hero = () => {
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold font-mono text-foreground">Yash Khunt</h3>
+                  <h3 className="text-xl font-semibold font-mono text-foreground">Yash Khunt</h3>
                   <p className="text-muted-foreground text-sm mb-4">Gujarat, India</p>
                   
                   <div className="flex items-center justify-between text-sm">
@@ -199,11 +200,11 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
 
         {/* Scroll Indicator */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
@@ -214,16 +215,17 @@ const Hero = () => {
             className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
             <span className="text-xs font-mono uppercase tracking-wider">Scroll Down</span>
-            <motion.div
+            <m.div
               animate={{ y: [0, 8, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
             >
-              <ArrowDown className="w-5 h-5" />
-            </motion.div>
+              <ArrowDown className="size-5" />
+            </m.div>
           </a>
-        </motion.div>
+        </m.div>
       </div>
     </section>
+    </LazyMotion>
   );
 };
 

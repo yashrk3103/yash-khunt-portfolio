@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
+import { LazyMotion, domAnimation, m, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Code2, Database, Wrench, Terminal, Cpu, Users } from 'lucide-react';
 
@@ -9,7 +8,7 @@ const skillCategories = [
     icon: Code2,
     color: 'text-terminal-cyan',
     bgColor: 'bg-terminal-cyan/10',
-    skills: ['React.js', 'HTML5', 'CSS3', 'JavaScript (ES6+)', 'Tailwind CSS', 'Bootstrap'],
+    skills: ['React.js', 'Next.js', 'TypeScript', 'HTML5', 'CSS3', 'JavaScript (ES6+)', 'Tailwind CSS', 'Bootstrap'],
   },
   {
     title: 'Backend',
@@ -23,7 +22,7 @@ const skillCategories = [
     icon: Database,
     color: 'text-terminal-blue',
     bgColor: 'bg-terminal-blue/10',
-    skills: ['MongoDB', 'Mongoose'],
+    skills: ['MongoDB', 'PostgreSQL', 'Mongoose'],
   },
   {
     title: 'Dev Tools',
@@ -53,34 +52,35 @@ const Skills = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
+    <LazyMotion features={domAnimation}>
     <section id="skills" className="py-24 relative" ref={ref}>
       {/* Background Pattern */}
       <div className="absolute inset-0 grid-pattern opacity-30" />
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <span className="section-badge mb-4">
-            <Code2 className="w-3 h-3" />
+            <Code2 className="size-3" />
             Technical Skills
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-4">
             My <span className="text-primary">Skill Set</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Technologies and tools I work with to bring ideas to life
           </p>
-        </motion.div>
+        </m.div>
 
         {/* Skills Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
-            <motion.div
+            <m.div
               key={category.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -99,9 +99,9 @@ const Skills = () => {
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <div className={`p-2 rounded-lg ${category.bgColor}`}>
-                    <category.icon className={`w-5 h-5 ${category.color}`} />
+                    <category.icon className={`size-5 ${category.color}`} />
                   </div>
-                  <h3 className="text-lg font-bold font-mono">{category.title}</h3>
+                  <h3 className="text-lg font-semibold font-mono">{category.title}</h3>
                 </div>
                 
                 <div className="flex flex-wrap gap-2">
@@ -112,12 +112,12 @@ const Skills = () => {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 
         {/* Additional Skills Banner */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -125,15 +125,16 @@ const Skills = () => {
         >
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-muted-foreground">
             <span className="text-sm font-mono">Other:</span>
-            {['Responsive UI', 'Chart.js', 'Socket.IO', 'AES/RSA Encryption', 'Streamlit'].map((skill) => (
+            {['Responsive UI', 'Chart.js', 'Gemini API', 'JWT / bcrypt', 'RBAC', 'Docker', 'Odoo ERP'].map((skill) => (
               <span key={skill} className="text-sm font-mono hover:text-primary transition-colors cursor-default">
                 {skill}
               </span>
             ))}
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
+    </LazyMotion>
   );
 };
 

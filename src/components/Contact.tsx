@@ -1,5 +1,4 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
+import { LazyMotion, domAnimation, m, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Mail, Phone, Github, Linkedin, Send, MessageSquare } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
@@ -56,38 +55,39 @@ const Contact = () => {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleFieldChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   return (
+    <LazyMotion features={domAnimation}>
     <section id="contact" className="py-24 relative" ref={ref}>
       {/* Background Pattern */}
       <div className="absolute inset-0 grid-pattern opacity-30" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <span className="section-badge mb-4">
-            <MessageSquare className="w-3 h-3" />
+            <MessageSquare className="size-3" />
             Contact
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-4">
             Get In <span className="text-primary">Touch</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Have a project in mind? Let's work together to bring your ideas to life
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Contact Info - Unchanged */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -108,7 +108,7 @@ const Contact = () => {
                   className="flex items-center gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-primary/10 border border-border hover:border-primary transition-all duration-300 group"
                 >
                   <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform">
-                    <Mail className="w-5 h-5" />
+                    <Mail className="size-5" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground mb-1">Email</p>
@@ -124,7 +124,7 @@ const Contact = () => {
                   className="flex items-center gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-primary/10 border border-border hover:border-primary transition-all duration-300 group"
                 >
                   <div className="p-3 rounded-lg bg-terminal-green/10 text-terminal-green group-hover:scale-110 transition-transform">
-                    <Phone className="w-5 h-5" />
+                    <Phone className="size-5" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground mb-1">Phone</p>
@@ -144,7 +144,7 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       className="p-3 rounded-lg bg-secondary hover:bg-primary/10 border border-border hover:border-primary text-muted-foreground hover:text-primary transition-all duration-300"
                     >
-                      <Github className="w-5 h-5" />
+                      <Github className="size-5" />
                     </a>
                     <a
                       href="http://www.linkedin.com/in/yash-khunt-a72440250"
@@ -152,16 +152,16 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       className="p-3 rounded-lg bg-secondary hover:bg-primary/10 border border-border hover:border-primary text-muted-foreground hover:text-primary transition-all duration-300"
                     >
-                      <Linkedin className="w-5 h-5" />
+                      <Linkedin className="size-5" />
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Contact Form */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -185,7 +185,7 @@ const Contact = () => {
                     id="from_name"
                     name="from_name" 
                     value={formData.from_name}
-                    onChange={handleChange}
+                    onChange={handleFieldChange}
                     required
                     placeholder="Your name"
                     className="input-terminal"
@@ -202,7 +202,7 @@ const Contact = () => {
                     id="from_email"
                     name="from_email"
                     value={formData.from_email}
-                    onChange={handleChange}
+                    onChange={handleFieldChange}
                     required
                     placeholder="your@email.com"
                     className="input-terminal"
@@ -218,10 +218,10 @@ const Contact = () => {
                     id="message"
                     name="message"
                     value={formData.message}
-                    onChange={handleChange}
+                    onChange={handleFieldChange}
                     required
                     rows={5}
-                    placeholder="Your message..."
+                    placeholder="Your message…"
                     className="input-terminal resize-none"
                   />
                 </div>
@@ -234,21 +234,22 @@ const Contact = () => {
                   {isSubmitting ? (
                     <span className="flex items-center gap-2">
                       <span className="animate-spin">⟳</span>
-                      Sending...
+                      Sending…
                     </span>
                   ) : (
                     <>
-                      <Send className="w-4 h-4" />
+                      <Send className="size-4" />
                       <span>send message</span>
                     </>
                   )}
                 </button>
               </form>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>
+    </LazyMotion>
   );
 };
 
