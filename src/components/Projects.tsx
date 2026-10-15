@@ -30,7 +30,7 @@ const projects = [
     ],
     tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Gemini API'],
     github: 'https://github.com/yashrk3103/AI-Invoice-Generator',
-    live: 'https://vercel-front-ten.vercel.app/',
+    live: 'https://ai-invoice-generator-sage.vercel.app/',
   },
   {
     title: 'User Management System',
