@@ -86,7 +86,7 @@
 - Integrated Google Gemini API for intelligent data extraction with minimal manual intervention
 - Secure REST APIs with role-based access control for invoice CRUD operations
 
-[![Live](https://img.shields.io/badge/Live_Demo-6366f1?style=flat-square&logo=google-chrome&logoColor=white)](https://vercel-front-ten.vercel.app/)
+[![Live](https://img.shields.io/badge/Live_Demo-6366f1?style=flat-square&logo=google-chrome&logoColor=white)](https://ai-invoice-generator-sage.vercel.app)
 [![Source](https://img.shields.io/badge/Source_Code-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/yashrk3103/AI-Invoice-Generator)
 
 ---
