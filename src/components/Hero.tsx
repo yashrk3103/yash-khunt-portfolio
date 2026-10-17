@@ -6,7 +6,7 @@ import profilePhoto from '@/assets/profile-photo.jpg';
 const roles = [
   'Full-Stack Developer',
   'MERN Stack Developer',
-  'Cybersecurity Enthusiast',
+  'Software Engineer',
 ];
 
 const Hero = () => {
@@ -104,9 +104,9 @@ const Hero = () => {
               transition={{ delay: 0.5 }}
               className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-xl"
             >
-              Passionate IT undergraduate with hands-on experience in full-stack web 
+              Passionate IT graduate with hands-on experience in full-stack web
               development using the MERN stack. Proficient in building responsive, 
-              secure, and dynamic web applications.
+              scalable, and dynamic web applications.
             </m.p>
 
             {/* CTA Buttons */}
@@ -194,8 +194,7 @@ const Hero = () => {
                   <p className="text-muted-foreground text-sm mb-4">Gujarat, India</p>
                   
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-primary font-mono">Full-Stack Developer  
-                      <br />Cybersecurity enthusiast </span>
+                    <span className="text-primary font-mono">Full-Stack Developer</span>
                   </div>
                 </div>
               </div>

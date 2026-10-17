@@ -1,6 +1,6 @@
 import { LazyMotion, domAnimation, m, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { GraduationCap, Code2, Shield, Sparkles } from 'lucide-react';
+import { GraduationCap, Code2, Layers, Sparkles } from 'lucide-react';
 
 const About = () => {
   const ref = useRef(null);
@@ -25,7 +25,7 @@ const About = () => {
             Know More <span className="text-primary">About Me</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A passionate developer focused on building secure, scalable applications
+            A passionate developer focused on building scalable full-stack applications
           </p>
         </m.div>
 
@@ -45,14 +45,14 @@ const About = () => {
               </div>
               <div className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  I am an IT undergraduate with a deep passion for building real-world applications 
+                  I am an IT graduate with a deep passion for building real-world applications
                   that solve meaningful problems. My journey in development started with curiosity 
                   and has evolved into a dedicated pursuit of excellence in full-stack development.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  With a strong focus on <span className="text-primary">security</span>, 
-                  <span className="text-primary"> scalability</span>, and 
-                  <span className="text-primary"> clean architecture</span>, I strive to create 
+                  With a strong focus on <span className="text-primary">scalability</span>,
+                  <span className="text-primary"> clean architecture</span>, and
+                  <span className="text-primary"> great user experiences</span>, I strive to create
                   applications that are not just functional but also maintainable and efficient.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
@@ -70,9 +70,9 @@ const About = () => {
               className="grid grid-cols-3 gap-4 mt-6"
             >
               {[
-                { value: '8.77', label: 'CGPA' },
+                { value: '8.91', label: 'CGPA' },
                 { value: '3+', label: 'Live Projects' },
-                { value: '3', label: 'Internships' },
+                { value: '1', label: 'Internship' },
               ].map((stat) => (
                 <div
                   key={stat.label}
@@ -106,19 +106,28 @@ const About = () => {
               <div className="space-y-4">
                 <div className="p-4 bg-secondary/50 rounded-lg border border-border">
                   <h4 className="font-semibold text-foreground">B.Tech in Information Technology</h4>
-                  <p className="text-primary text-sm font-mono">Sarvajanik University</p>
+                  <p className="text-primary text-sm font-mono">Sarvajanik College of Engineering and Technology</p>
                   <div className="flex items-center justify-between mt-2 text-sm text-muted-foreground">
-                    <span>2022 – 2026</span>
-                    <span className="text-terminal-green">CGPA: 8.77</span>
+                    <span>Aug 2022 – May 2026</span>
+                    <span className="text-terminal-green">CGPA: 8.91</span>
                   </div>
                 </div>
                 
                 <div className="p-4 bg-secondary/50 rounded-lg border border-border">
-                  <h4 className="font-semibold text-foreground">Higher Secondary (PCM)</h4>
-                  <p className="text-primary text-sm font-mono">Kaushal Vidyabhavan</p>
+                  <h4 className="font-semibold text-foreground">Standard 12th</h4>
+                  <p className="text-primary text-sm font-mono">Gujarat Secondary and Higher Secondary Education Board</p>
                   <div className="flex items-center justify-between mt-2 text-sm text-muted-foreground">
-                    <span>2022</span>
+                    <span>Jun 2020 – Mar 2022</span>
                     <span className="text-terminal-green">76%</span>
+                  </div>
+                </div>
+
+                <div className="p-4 bg-secondary/50 rounded-lg border border-border">
+                  <h4 className="font-semibold text-foreground">Standard 10th</h4>
+                  <p className="text-primary text-sm font-mono">Gujarat Secondary and Higher Secondary Education Board</p>
+                  <div className="flex items-center justify-between mt-2 text-sm text-muted-foreground">
+                    <span>Jun 2019 – Mar 2020</span>
+                    <span className="text-terminal-green">84.67%</span>
                   </div>
                 </div>
               </div>
@@ -138,11 +147,11 @@ const About = () => {
               
               <div className="terminal-card p-5 hover-glow">
                 <div className="p-2 rounded-lg bg-terminal-green/10 text-terminal-green w-fit mb-3">
-                  <Shield className="size-5" />
+                  <Layers className="size-5" />
                 </div>
-                <h4 className="font-semibold font-mono mb-2">Security Focused</h4>
+                <h4 className="font-semibold font-mono mb-2">Scalable Solutions</h4>
                 <p className="text-sm text-muted-foreground">
-                  Implementing secure authentication & encryption
+                  Building reliable applications with clean, maintainable architecture
                 </p>
               </div>
             </div>

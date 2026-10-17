@@ -15,7 +15,7 @@ const skillCategories = [
     icon: Terminal,
     color: 'text-terminal-green',
     bgColor: 'bg-terminal-green/10',
-    skills: ['Node.js', 'Express.js', 'REST APIs', 'JWT Authentication'],
+    skills: ['Node.js', 'Express.js', 'REST APIs', 'WebSocket'],
   },
   {
     title: 'Database',
@@ -29,14 +29,14 @@ const skillCategories = [
     icon: Wrench,
     color: 'text-terminal-yellow',
     bgColor: 'bg-terminal-yellow/10',
-    skills: ['Git', 'GitHub', 'Postman', 'VS Code', 'Docker', 'Vercel', 'Netlify'],
+    skills: ['Git', 'GitHub', 'Postman', 'Vercel', 'Netlify', 'Render', 'Railway', 'CI/CD', 'Agile/Scrum', 'Unit Testing'],
   },
   {
     title: 'Languages',
     icon: Cpu,
     color: 'text-terminal-magenta',
     bgColor: 'bg-terminal-magenta/10',
-    skills: ['JavaScript', 'Python', 'C', 'C++', 'Bash'],
+    skills: ['JavaScript', 'TypeScript', 'Python', 'C/C++'],
   },
   {
     title: 'Soft Skills',
@@ -125,7 +125,7 @@ const Skills = () => {
         >
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-muted-foreground">
             <span className="text-sm font-mono">Other:</span>
-            {['Responsive UI', 'Chart.js', 'Gemini API', 'JWT / bcrypt', 'RBAC', 'Docker', 'Odoo ERP'].map((skill) => (
+            {['Responsive UI', 'Gemini API', 'JWT / bcrypt', 'RBAC', 'DSA', 'OOP', 'OS', 'DBMS', 'Computer Networks'].map((skill) => (
               <span key={skill} className="text-sm font-mono hover:text-primary transition-colors cursor-default">
                 {skill}
               </span>

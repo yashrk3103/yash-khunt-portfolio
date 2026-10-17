@@ -1,6 +1,6 @@
 import { LazyMotion, domAnimation, m, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Code2, Shield, Plug, Brain, Cloud, Sparkles } from 'lucide-react';
+import { Code2, Database, Plug, Brain, Cloud, Sparkles } from 'lucide-react';
 
 const services = [
   {
@@ -11,9 +11,9 @@ const services = [
     bgColor: 'bg-terminal-cyan/10',
   },
   {
-    icon: Shield,
-    title: 'Secure Application Development',
-    description: 'Implement secure authentication, encryption concepts, and best practices for web security.',
+    icon: Database,
+    title: 'Backend & Database Development',
+    description: 'Build reliable backend services, data models, and integrations for production-ready applications.',
     color: 'text-terminal-green',
     bgColor: 'bg-terminal-green/10',
   },

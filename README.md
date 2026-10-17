@@ -2,7 +2,7 @@
 
 # Hey, I'm Yash Khunt 👋
 
-### Full-Stack Developer · Cybersecurity Enthusiast · IT Undergraduate @ SCET Surat
+### Full-Stack Developer · IT Graduate @ SCET Surat
 
 <a href="https://yash-khunt-portfolio.vercel.app/">
   <img src="https://img.shields.io/badge/🌐 Portfolio-Visit Now-6366f1?style=for-the-badge" />
@@ -23,10 +23,10 @@
 
 ### 👨‍💻 About Me
 
-- 🎓 &nbsp; **B.Tech in Information Technology** @ Sarvajanik University, Surat · **CGPA: 8.77 / 10**
-- 💼 &nbsp; Currently **Software Engineer Intern** @ Synodica Solutions Pvt. Ltd.
+- 🎓 &nbsp; **B.Tech in Information Technology** @ Sarvajanik College of Engineering and Technology, Surat · **CGPA: 8.91 / 10**
+- 💼 &nbsp; Completed a six-month **Software Engineer Internship** @ Synodica Solutions Pvt. Ltd. (Jan–Jun 2026)
 - 🔭 &nbsp; Building production full-stack apps with the **MERN stack** and integrating **AI / Gemini APIs**
-- 🛡️ &nbsp; Passionate about **Cybersecurity** — encryption, secure APIs, and network security
+- 🧩 &nbsp; Passionate about building **scalable full-stack applications** with clean architecture
 - 🌱 &nbsp; Learning **System Design, AWS Cloud, Docker, and DevOps**
 - 🤝 &nbsp; Open to **collaborating on open-source projects** and **backend / full-stack roles**
 - ⚡ &nbsp; Fun fact: I built a RBAC system where even the Admin can't touch another role's data 🔒
@@ -61,7 +61,6 @@
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
-![Odoo](https://img.shields.io/badge/Odoo-714B67?style=flat-square&logo=odoo&logoColor=white)
 
 ---
 
@@ -84,14 +83,14 @@
 
 - Full-stack AI-powered invoice system enabling automated invoice creation from user inputs and uploaded documents
 - Integrated Google Gemini API for intelligent data extraction with minimal manual intervention
-- Secure REST APIs with role-based access control for invoice CRUD operations
+- REST APIs with role-based access control for invoice CRUD operations
 
 [![Live](https://img.shields.io/badge/Live_Demo-6366f1?style=flat-square&logo=google-chrome&logoColor=white)](https://ai-invoice-generator-sage.vercel.app/)
 [![Source](https://img.shields.io/badge/Source_Code-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/yashrk3103/AI-Invoice-Generator)
 
 ---
 
-#### 🔐 User Management System — *Secure RBAC Platform*
+#### 👥 User Management System — *Role-Based User Platform*
 > MongoDB · Express.js · React.js · Node.js · JWT · bcrypt
 
 - Full-stack MERN platform with JWT & bcrypt authentication, session timeout, and inactive user lockout
@@ -107,9 +106,7 @@
 
 | Role | Company | Duration |
 |------|---------|----------|
-| 💻 Software Engineer Intern | **Synodica Solutions Pvt. Ltd.** | Jan 2026 – Present |
-| 🛡️ Cyber Security Intern | **Elevate Labs** | Jun 2025 – Jul 2025 |
-| 🛡️ Cyber Security Intern | **Extion Infotech** | Aug 2024 – Nov 2024 |
+| 💻 Software Engineer Intern | **Synodica Solutions Pvt. Ltd.** | Jan 2026 – Jun 2026 |
 
 ---
 
@@ -117,10 +114,7 @@
 
 | Certificate | Issuer |
 |------------|--------|
-| 🔐 Foundations of Cybersecurity | Google |
-| 🔐 Play It Safe: Manage Security Risks | Google |
-| 🔐 Connect and Protect: Networks and Network Security | Google |
-| 🔐 Tools of the Trade: Linux and SQL | Google |
+| The Complete React 19 Course, incl. Next JS & Express | Udemy (Coding Revolution) |
 
 ---
 
@@ -128,9 +122,9 @@
 
 | Degree | Institution | Year | Score |
 |--------|-------------|------|-------|
-| B.Tech — Information Technology | Sarvajanik University, Surat | 2022 – 2026 | CGPA: 8.77 |
-| HSC (PCM) | Kaushal Vidyabhavan, Surat | 2022 | 76% |
-| SSC | JB & Karp Vidya Sankul, Surat | 2020 | 84.67% |
+| B.Tech — Information Technology | Sarvajanik College of Engineering and Technology, Surat | Aug 2022 – May 2026 | CGPA: 8.91 |
+| Standard 12th | Gujarat Secondary and Higher Secondary Education Board | Jun 2020 – Mar 2022 | 76% |
+| Standard 10th | Gujarat Secondary and Higher Secondary Education Board | Jun 2019 – Mar 2020 | 84.67% |
 
 ---
 

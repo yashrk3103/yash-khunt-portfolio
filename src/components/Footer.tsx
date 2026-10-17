@@ -21,7 +21,7 @@ const Footer = () => {
           {/* Tagline */}
           <div className="flex items-center gap-2 text-sm text-muted-foreground font-mono">
             <span className="text-primary">&gt;</span>
-            <span>Crafting secure, scalable web experiences</span>
+            <span>Crafting scalable, user-focused web experiences</span>
             <span className="text-primary animate-pulse">_</span>
           </div>
 

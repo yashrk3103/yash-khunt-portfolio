@@ -1,45 +1,19 @@
 import { LazyMotion, domAnimation, m, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Briefcase, Calendar, MapPin, Shield } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, Code2 } from 'lucide-react';
 
 const experiences = [
   {
     title: 'Software Engineer Intern',
     company: 'Synodica Solutions Pvt. Ltd.',
     location: 'Surat',
-    period: 'Jan 2026 – Present', // Updated date
+    period: 'Jan 2026 – Jun 2026',
     description: [
-      'Developing and customizing modules in Odoo ERP using Python and XML',
-      'Managing Linux-based server environments for deployment and testing',
-      'Collaborating with senior developers to optimize database queries and performance',
+      'Built a 10+ page production web app using Next.js, React, TypeScript, and Tailwind CSS',
+      'Implemented a three-step booking flow with coupon engine, eight payment options, and automated invoice generation',
+      'Integrated OTP-based authentication and real-time order status tracking',
     ],
-    tech: ['Python', 'Linux', 'Odoo', 'PostgreSQL'], // Added tech stack
-    current: true,
-  },
-  {
-    title: 'Cyber Security Intern',
-    company: 'Elevate Labs',
-    location: 'Remote',
-    period: 'June 2025 – July 2025',
-    description: [
-      'Working on application security fundamentals',
-      'Learning security assessment methodologies',
-      'Hands-on experience with security tools',
-    ],
-    tech: ['Network Traffic Analysis', 'Encryption', ' Python ', 'Vulnerability Scanning' ],
-    current: false, // Changed to false since the new one is current
-  },
-  {
-    title: 'Cyber Security Intern',
-    company: 'Extion Infotech',
-    location: 'Remote',
-    period: 'August 2024 – November 2024',
-    description: [
-      'Gained exposure to real-world cybersecurity challenges',
-      'Learned about application security best practices',
-      'Participated in security awareness initiatives',
-    ],
-    tech: ['Kali Linux', 'Network Traffic Analysis', 'Vulnerability Scanning', 'Wireshark', 'DoS/DDoS Attack Mitigation Techniques'],
+    tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
     current: false,
   },
 ];
@@ -88,7 +62,7 @@ const Experience = () => {
               >
                 {/* Timeline Dot */}
                 <div className="timeline-dot top-2">
-                  <Shield className="size-3 text-primary" />
+                  <Code2 className="size-3 text-primary" />
                 </div>
 
                 {/* Content Card */}
